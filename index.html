@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверил, проверяй!</title>
+    <meta name="description" content="Сайт-портфолио, интерактивные инсталляции и web-разработка">
+    
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@900&family=Anonymous+Pro:wght@700&family=Comfortaa:wght@700&family=Cormorant+Garamond:wght@700&family=Cormorant+SC:wght@700&family=Didact+Gothic&family=Jost:wght@900&family=Merriweather:wght@900&family=Montserrat+Alternates:wght@900&family=Playfair+Display:wght@900&family=Poiret+One&family=Prosto+One&family=Roboto:wght@900&family=Roboto+Slab:wght@900&family=Russo+One&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- SEO -->
+
+    <!-- Прелоадер (опционально) -->
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loader-text {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="global-ticker">
+        <div class="ticker-track">
+            <div class="ticker-content" id="tickerContent">
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+                <span data-section="1">MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • MAIN • ГЛАВНАЯ • </span>
+            </div>
+        </div>
+        <div class="ticker-nav">
+            <button class="ticker-nav-btn active" data-section="1">MAIN</button>
+            <button class="ticker-nav-btn" data-section="2">ABOUT</button>
+            <button class="ticker-nav-btn" data-section="3">WORKS</button>
+            <button class="ticker-nav-btn" data-section="4">CONTACTS</button>
+        </div>
+    </div>
+
+    <!-- Прелоадер пока грузятся секции -->
+    <div class="loader" id="loader">
+        <div class="loader-text">Загрузка...</div>
+    </div>
+
+    <!-- Основной контейнер -->
+    <div class="main-container">
+        <!-- Навигационные точки -->
+        <div class="nav-dots">
+            <div class="nav-dot active" data-section="1"></div>
+            <div class="nav-dot" data-section="2"></div>
+            <div class="nav-dot" data-section="3"></div>
+            <div class="nav-dot" data-section="4"></div>
+        </div>
+
+        <!-- Сюда будут загружены все секции -->
+        <div class="sections-wrapper" id="sectionsWrapper">
+            <!-- Секции загрузятся сюда динамически -->
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="js/data.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/color-picker.js"></script>
+    <script src="js/title.js"></script>
+    <script src="js/contacts-interaction.js"></script>
+    <script src="js/template-loader.js"></script>
+</body>
+</html>

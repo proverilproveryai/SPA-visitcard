@@ -1,0 +1,330 @@
+/* ==========================================
+   СЕКЦИЯ 4 - КОНТАКТЫ (CONTACTS) - REDESIGNED
+   ========================================== */
+
+#section4 {
+    background: #1a1a1a;
+    color: white;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* ==========================================
+   ОСНОВНОЙ КОНТЕЙНЕР
+   ========================================== */
+.contacts-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/* ==========================================
+   ЛЕВАЯ ЧАСТЬ - КОНТАКТЫ
+   ========================================== */
+.contacts-left-section {
+    flex: 0 0 50%;
+    padding: 80px 60px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Художественная обводка заголовка */
+.contacts-title-outline {
+    position: absolute;
+    top: 31%;
+    left: 70px;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    text-stroke: 1px rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 0;
+    /* Смещение для художественного эффекта */
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.contacts-title-outline::before {
+    content: 'КОНТАКТЫ';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+    text-stroke: 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Основной заголовок */
+.contacts-main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Блок с контактами */
+.contacts-info-block {
+    position: relative;
+    z-index: 1;
+    line-height: 0.3;
+}
+
+.contacts-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+    gap: 20px;
+}
+
+.contact-label {
+    flex: 0 0 140px;
+    font-size: 0.75rem;
+    /* letter-spacing: 1px; */
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.contact-value {
+    flex: 1;
+    font-size: 0.85rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Anonymous Pro', monospace;
+    transition: all 0.3s ease;
+}
+
+.contact-value:hover {
+    color: #667eea;
+    transform: translateX(5px);
+}
+
+/* Социальные сети - отдельный блок */
+.contacts-social {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   ПРАВАЯ ЧАСТЬ - ФОТО
+   ========================================== */
+.contacts-right-section {
+    flex: 0 0 50%;
+    position: relative;
+    padding: 20px 20px 70px 0; /* Отступы с учетом бегущей строки (50px + 20px) */
+}
+
+.contacts-photo-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.contacts-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) contrast(1.2);
+    opacity: 0.85;
+    transition: all 0.5s ease;
+}
+
+.contacts-photo-wrapper:hover img {
+    filter: grayscale(50%) contrast(1.1);
+    opacity: 0.95;
+    transform: scale(1.02);
+}
+
+/* ==========================================
+   АДАПТИВ - Планшеты (1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+    .contacts-left-section {
+        flex: 0 0 55%;
+        padding: 60px 40px 60px 60px;
+    }
+    
+    .contacts-right-section {
+        flex: 0 0 45%;
+    }
+    
+    .contacts-main-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+    
+    .contacts-title-outline {
+        left: -50px;
+        width: 400px;
+        height: 150px;
+    }
+    
+    .contact-label {
+        flex: 0 0 120px;
+        font-size: 0.7rem;
+    }
+    
+    .contact-value {
+        font-size: 0.8rem;
+    }
+
+    .contacts-info-block {
+        line-height: 0.5; /* Промежуточное значение для планшетов */
+    }
+
+    .contacts-row {
+        margin-bottom: 15px; /* Немного увеличиваем отступы */
+    }
+}
+
+/* ==========================================
+   АДАПТИВ - Мобильные (768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+    
+    .contacts-left-section {
+        flex: 0 0 60%;
+        padding: 40px 30px;
+    }
+    
+    .contacts-right-section {
+        flex: 0 0 40%;
+        padding: 0 15px 60px 15px;
+    }
+    
+    .contacts-main-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .contacts-title-outline {
+        display: none;
+    }
+    
+    .contacts-info-block {
+        max-width: 400px;
+        margin: 0 auto;
+        line-height: 1.4; /* Восстанавливаем нормальный line-height */
+    }
+    
+    .contacts-row {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px; /* Увеличиваем отступ между строками */
+        line-height: 1.3; /* Нормализуем line-height для мобильных */
+    }
+    
+    .contact-label {
+        flex: none;
+        font-size: 0.65rem;
+        opacity: 0.4;
+        line-height: 1.2;
+    }
+    
+    .contact-value {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .contacts-social {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+}
+
+/* ==========================================
+   АДАПТИВ - iPhone SE (375px)
+   ========================================== */
+@media (max-width: 375px) {
+    .contacts-left-section {
+        padding: 30px 20px;
+    }
+    
+    .contacts-main-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+    
+    .contacts-info-block {
+        line-height: 1.4; /* Нормальный line-height для маленьких экранов */
+    }
+    
+    .contacts-row {
+        margin-bottom: 18px; /* Компенсируем маленький line-height отступами */
+        line-height: 1.3;
+    }
+    
+    .contact-label {
+        font-size: 0.6rem;
+        line-height: 1.2;
+        margin-bottom: 3px; /* Небольшой отступ между label и value */
+    }
+    
+    .contact-value {
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+    
+    .contacts-right-section {
+        padding: 0 10px 55px 10px;
+    }
+    
+    .contacts-social {
+        margin-top: 25px;
+        padding-top: 18px;
+    }
+}
+
+/* ==========================================
+   АНИМАЦИИ
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacts-main-title {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.contacts-row {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.contacts-row:nth-child(1) { animation-delay: 0.1s; }
+.contacts-row:nth-child(2) { animation-delay: 0.2s; }
+.contacts-row:nth-child(3) { animation-delay: 0.3s; }
+.contacts-social .contacts-row:nth-child(1) { animation-delay: 0.4s; }
+.contacts-social .contacts-row:nth-child(2) { animation-delay: 0.5s; }
+.contacts-social .contacts-row:nth-child(3) { animation-delay: 0.6s; }
+.contacts-social .contacts-row:nth-child(4) { animation-delay: 0.7s; }

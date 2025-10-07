@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+    <defs>
+        <path id="circle-path" d="M 150, 150 m -131, 0 a 131,131 0 1,1 262,0 a 131,131 0 1,1 -262,0"/>
+        <style>
+            .circle-text {
+                fill: white;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-weight: 500;
+                font-family: 'Russo One', sans-serif;
+            }
+        </style>
+    </defs>
+    <text class="circle-text">
+        <textPath href="#circle-path" startOffset="0%">
+            ЕСТЬ ДВА ТИПА ЛЮДЕЙ: ПЕРВЫЙ ТИП ЛЮБИТ РЕКУРСИЮ, А ВТОРОЙ УТВЕРЖДАЕТ ЧТО 
+        </textPath>
+    </text>
+</svg>
