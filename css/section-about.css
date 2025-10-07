@@ -332,8 +332,8 @@
     }
     
     .about-intro {
-        font-size: 1rem;
-        line-height: 1.45;
+        font-size: 0.9rem;
+        line-height: 1;
         margin-bottom: 20px;
     }
     
@@ -348,7 +348,8 @@
     }
     
     .about-skills li {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
+        line-height: 0.8;
         padding: 8px 0;
         padding-left: 18px;
     }

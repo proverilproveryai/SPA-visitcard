@@ -878,7 +878,6 @@
     }
     
     .works-content {
-        padding: 0 40px;
         display: flex; /* ДОБАВИТЬ */
         justify-content: center; /* ДОБАВИТЬ */
         align-items: center; /* ДОБАВИТЬ */
