@@ -693,7 +693,7 @@
     
     .works-container .section-title {
         font-size: 1.8rem; /* УМЕНЬШЕНО с 2rem */
-        margin-bottom: 15px; /* УМЕНЬШЕНО */
+        margin-bottom: 5px; /* УМЕНЬШЕНО */
     }
     
     .works-content {
@@ -827,7 +827,7 @@
     .works-container .section-title {
         font-size: 1.5rem; /* УМЕНЬШЕНО с 1.75rem */
         letter-spacing: 0.5px; /* УМЕНЬШЕНО */
-        margin-bottom: 15px; /* УМЕНЬШЕНО */
+        margin-bottom: 0px; /* УМЕНЬШЕНО */
     }
     
     .carousel-square {
