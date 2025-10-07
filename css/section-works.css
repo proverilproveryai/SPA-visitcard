@@ -19,6 +19,7 @@
     z-index: 2;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 70px; /* Добавляем место для стрелок */
 }
 
 /* Заголовок секции */
@@ -31,17 +32,6 @@
     z-index: 2;
     font-weight: 900;
     letter-spacing: 2px;
-}
-
-/* Основной контент - ВАЖНО: position: relative для стрелок */
-.works-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 /* ==========================================
@@ -585,7 +575,7 @@
 @media (max-width: 1300px) {
     .works-content {
         gap: 60px;
-        padding: 0 70px; /* Добавляем место для стрелок */
+        padding: 0px;
     }
     
     /* Стрелки ближе к контенту */
@@ -645,10 +635,6 @@
     .work-title {
         font-size: 1.6rem;
         text-align: center;
-    }
-    
-    .works-content {
-        padding: 0 20px;
     }
     
     .work-card {
@@ -712,7 +698,6 @@
     
     .works-content {
         gap: 30px;
-        padding: 0 50px;
         display: flex; /* ДОБАВИТЬ */
         justify-content: center; /* ДОБАВИТЬ */
         align-items: center; /* ДОБАВИТЬ */
