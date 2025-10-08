@@ -218,8 +218,11 @@
    АДАПТИВ - Планшеты (1024px)
    ========================================== */
 @media (max-width: 1024px) {
+    #section2 {
+        justify-content: flex-start;
+    }
     .about-container {
-        padding: 0 30px;
+        padding: 30px 0px 30px 30px;
     }
     
     .about-grid {
@@ -326,11 +329,7 @@
 /* ==========================================
    АДАПТИВ - iPhone SE (375px)
    ========================================== */
-@media (max-width: 375px) {
-    .about-container {
-        padding: 0 15px;
-    }
-    
+@media (max-width: 375px) {    
     .about-intro {
         font-size: 0.9rem;
         line-height: 1;
